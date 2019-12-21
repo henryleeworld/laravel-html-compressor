@@ -16,10 +16,6 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 設定可以通過施工中進入的六位數字代碼。
-```sh
-$ php artisan code:set 六位數字代碼
-```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/` 來進入歡迎頁面。
 
