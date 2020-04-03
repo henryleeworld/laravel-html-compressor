@@ -1,4 +1,4 @@
-# Laravel 6 網頁壓縮
+# Laravel 7 網頁壓縮
 
 引入 renatomarinho 的 laravel-page-speed 套件來用於通過刪除不必要的空格，換行符，製表符和其他額外對象來壓縮 HTML 代碼，可以讓網頁加速開啟，減少等待時間。
 
