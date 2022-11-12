@@ -11,7 +11,7 @@ return [
     | You would probably replace that in your local configuration to get a readable output.
     |
     */
-    'enable' => env('LARAVEL_PAGE_SPEED_ENABLE', true),
+    'enable' => env('LARAVEL_PAGE_SPEED_ENABLE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,8 @@ return [
         '*.iso',
         '*.flv',
         '*.m4v',
-        '*.torrent'
+        '*.torrent',
+        '*/downloads/*', //Ignore all routes that contain 'downloads',
+        'assets/*', // Ignore all routes with the 'assets' prefix
     ],
-
 ];
