@@ -1,6 +1,6 @@
-# Laravel 11 網頁壓縮
+# Laravel 12 網頁壓縮
 
-引入 haggag 的 laravel-page-speed 套件來用於通過刪除不必要的空格，換行符，製表符和其他額外對象來壓縮 HTML 代碼，可以讓網頁加速開啟，減少等待時間。
+引入 gopalindians 的 laravel-page-speed 套件來用於通過刪除不必要的空格，換行符，製表符和其他額外對象來壓縮 HTML 代碼，可以讓網頁加速開啟，減少等待時間。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -16,11 +16,15 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/` 來進入歡迎頁面。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/WJM2KJf.png)
+![](https://i.imgur.com/AMtGBHl.png)
 > 經壓縮過的網頁，並沒有在瀏覽器出現任何變化，反而幫助加速瀏覽網頁開啟

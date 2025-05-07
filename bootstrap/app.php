@@ -9,8 +9,8 @@ use RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes;
 use RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss;
 use RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch;
 use RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments;
-// use RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes;
-// use enatoMarinho\LaravelPageSpeed\Middleware\TrimUrls; 
+//use RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes;
+//use RenatoMarinho\LaravelPageSpeed\Middleware\TrimUrls;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
