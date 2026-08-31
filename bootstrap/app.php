@@ -9,8 +9,6 @@ use RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes;
 use RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss;
 use RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch;
 use RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments;
-//use RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes;
-//use RenatoMarinho\LaravelPageSpeed\Middleware\TrimUrls;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -18,18 +16,16 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware) {
-        $middleware->append([
+    ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->web(append: [
             InlineCss::class,
             ElideAttributes::class,
             InsertDNSPrefetch::class,
             RemoveComments::class,
-            // TrimUrls::class,
-            // RemoveQuotes::class,
-            CollapseWhitespace::class, // Note: This middleware invokes "RemoveComments::class" before it runs.
+            CollapseWhitespace::class,
             DeferJavascript::class,
         ]);
     })
-    ->withExceptions(function (Exceptions $exceptions) {
+    ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();
